@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-gray-100 font-sans antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-700 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-gray-900 border border-gray-800 rounded-xl;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .btn-primary {
+    @apply bg-brand-500 hover:bg-brand-600 text-white px-4 py-2 rounded-lg font-medium 
+           transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-ghost {
+    @apply bg-gray-800 hover:bg-gray-700 text-gray-300 px-4 py-2 rounded-lg font-medium transition-colors;
+  }
+
+  .action-receipt {
+    @apply flex items-start gap-3 p-3 rounded-lg border text-sm;
+  }
+
+  .action-completed {
+    @apply bg-green-950/40 border-green-800/40;
+  }
+
+  .action-denied {
+    @apply bg-red-950/40 border-red-800/40;
+  }
+
+  .action-escalated {
+    @apply bg-amber-950/40 border-amber-800/40;
+  }
+
+  .action-info {
+    @apply bg-blue-950/40 border-blue-800/40;
+  }
+}
+
+/* Chat bubble styles */
+.chat-bubble-user {
+  @apply bg-brand-500/20 border border-brand-500/30 rounded-2xl rounded-tr-sm px-4 py-3 text-sm text-gray-100;
+}
+
+.chat-bubble-agent {
+  @apply bg-gray-800/60 border border-gray-700/50 rounded-2xl rounded-tl-sm px-4 py-3 text-sm text-gray-100;
+}
+
+/* Reasoning trace */
+.trace-step {
+  @apply flex items-start gap-2 text-xs font-mono text-gray-400 py-1;
+}
+
+/* Sentiment pulse animation */
+@keyframes pulse-sentiment {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.sentiment-pulse {
+  animation: pulse-sentiment 2s ease-in-out infinite;
+}
+
+/* Typing indicator */
+@keyframes typing-dot {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+.typing-dot {
+  animation: typing-dot 1.2s ease-in-out infinite;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
