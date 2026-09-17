@@ -1,8 +1,6 @@
 # SkyConnect ResolutionAI
 ### AIONOS Assignment 3 — Customer-Facing Resolution Agent (Airline Disruption)
 
-> **Live demo:** _[add Vercel/Railway URL after deploy]_  
-> **Demo video:** _[add Google Drive link]_
 
 ---
 
