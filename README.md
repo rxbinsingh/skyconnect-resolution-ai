@@ -139,7 +139,6 @@ Agent correctly: issues meal voucher + lounge ✅ | arranges partial hotel stay 
 | Tool | How |
 |---|---|
 | Groq (Llama 3.3 70B) | All 3 LLM calls — sentiment, reasoning, response |
-| Kiro (AI IDE) | Architecture design, code generation, iteration |
 
 ---
 
